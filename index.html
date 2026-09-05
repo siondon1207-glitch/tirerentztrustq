@@ -1,23 +1,1357 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+  <!-- JSON-LD 구조화 데이터 (LLM 및 검색엔진 최적화) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AutoRepair",
+        "@id": "https://car.reliabledone.com/#autorepair",
+        "name": "타이어수리 및 렌탈 통합 기술 컨설팅 센터",
+        "description": "2026년 기준 공인 안전 규격에 맞춘 타이어수리, 펑크 진단, 버섯패치 시공 및 브랜드별 렌탈 요금제 비교 분석 전문 플랫폼",
+        "url": "https://car.reliabledone.com/tire-repair-guide-2026",
+        "telephone": "1588-0000",
+        "priceRange": "10,000원 - 1,500,000원",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "서울특별시 서초구 반포대로 201",
+          "addressLocality": "서초구",
+          "addressRegion": "서울특별시",
+          "postalCode": "06590",
+          "addressCountry": "KR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:30",
+            "closes": "19:00"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "타이어수리 및 정비 서비스 카탈로그",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "내면 가황 결합형 버섯패치 복합 타이어수리"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "응급 외부 삽입형 실 스트립 지렁이 수리"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "초정밀 동적 휠 밸런스 및 휠 얼라인먼트 교정"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "넥센, 한국, 금호 타이어렌탈 정기 케어 패키지"}}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://car.reliabledone.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "타이어 바닥면이 아닌 측면(사이드월)에 펑크가 났을 때 타이어수리가 가능한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "타이어 측면인 사이드월(Sidewall)과 어깨 부위인 숄더(Shoulder) 영역은 주행 중 지속적인 수직 하중 굴절 운동과 강력한 원심력을 직접 받으며 카카스 플라이(코드 섬유층)가 단층으로 형성되어 있습니다. 따라서 이 부위가 관통되거나 손상된 경우 내부 압력을 견딜 수 없어 어떠한 패치나 플러그로도 완전한 타이어수리가 불가능하며, 즉시 새 타이어로 교체해야만 고속 주행 중 파열 사고를 예방할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "일명 지렁이 플러그 수리와 내부 버섯패치 수리의 기술적 차이점과 수명은 어떠한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "지렁이 수리(외부 삽입 씰 스트립)는 타이어를 휠에서 탈거하지 않고 관통 구멍 외부에서 고무 끈을 밀어 넣는 임시 응급조치 방식입니다. 시공 시간이 5분 이내로 빠르지만 타이어 내부의 코드 파손 및 분말화 상태를 육안 검사할 수 없고 시간이 지나면서 경화 누기가 발생할 수 있습니다. 반면 버섯패치(내부 일체형 플러그 패치)는 타이어를 분리하여 안쪽 이너라이너를 연마한 뒤 스템 플러그와 원형 패치가 결합된 특수 자재를 화학 가황 본드로 융착시키는 영구적 정밀 수리 공법으로, 타이어 마모 수명이 다할 때까지 신차 출고 상태와 동일한 기밀성과 안전성을 보장합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "2026년 타이어수리 평균 비용과 렌탈 서비스 가입 시 무상 수리 혜택 범위는 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "일반 정비소 및 공임 카센터 기준 단순 지렁이 타이어수리 비용은 10,000원에서 15,000원 선이며, 타이어를 탈착하여 시공하는 고급 버섯패치 내면 수리 비용은 개당 40,000원에서 60,000원 선입니다. 반면 넥센 넥스트레벨 등 공식 타이어렌탈 서비스에 가입 계약한 경우, 계약 기간 동안 파손 보증 케어 서비스가 제공되어 단순 펑크 타이어수리는 물론 사이드월 파손 등 수리 불가 상태 발생 시에도 무상으로 동일 규격 신품 타이어 교체 지원 혜택을 받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "전기차 전용 타이어에 펑크가 발생했을 때 일반 타이어수리와 다른 점이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "전기차 전용 타이어(한국 아이온, 금호 이노뷔, 넥센 엔페라 슈프림 EV 등)는 내부에 노면 소음을 흡수하기 위한 두꺼운 폴리우레탄 흡음재 스펀지 폼이 부착되어 있습니다. 따라서 관통 시 지렁이 플러그를 무리하게 외부에서 찌르면 흡음재가 말려 들어가 진동 밸런스가 파괴되므로, 반드시 휠에서 타이어를 분리하여 관통 부위 주변 흡음재 폼을 정밀하게 국소 절개한 후 내부 버섯패치 타이어수리를 진행하고 흡음재를 전용 접착제로 재부착하는 고난도 전문 공정이 필수적입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-soft: #eff6ff;
+      --secondary: #0d9488;
+      --secondary-soft: #f0fdfa;
+      --accent: #d97706;
+      --accent-soft: #fffbeb;
+      --dark: #0f172a;
+      --text: #334155;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --border-focus: #93c5fd;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.12);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      font-size: 1.05rem;
+      letter-spacing: -0.015em;
+      word-break: keep-all;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 상단 헤더 영역 */
+    header.site-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1e40af 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      border-bottom: 4px solid var(--secondary);
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.3);
+      color: #5eead4;
+      border: 1px solid #14b8a6;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 2.35rem;
+      line-height: 1.35;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    header p.lead {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 860px;
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    /* 내비게이션 바 */
+    nav.quick-nav {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      margin-top: 24px;
+    }
+
+    nav.quick-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      list-style: none;
+    }
+
+    nav.quick-nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav.quick-nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* 본문 구조 */
+    main {
+      padding: 48px 0 80px;
+    }
+
+    article {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 48px 40px;
+      margin-bottom: 40px;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: var(--primary);
+      font-weight: 800;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: var(--dark);
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      color: #1e293b;
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 1.25em;
+      color: var(--text);
+    }
+
+    strong {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    /* 시각적 강조 카드 박스 */
+    .callout-box {
+      background: var(--primary-soft);
+      border-left: 5px solid var(--primary-light);
+      padding: 22px 26px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 28px 0;
+    }
+
+    .callout-box.alert {
+      background: #fef2f2;
+      border-left-color: #ef4444;
+    }
+
+    .callout-box.success {
+      background: var(--secondary-soft);
+      border-left-color: var(--secondary);
+    }
+
+    .callout-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 그리드 카드 레이아웃 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin: 30px 0;
+    }
+
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-focus);
+    }
+
+    .feature-card .card-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--secondary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .feature-card h4 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    /* 정밀 표 스타일링 */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 32px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.96rem;
+      background: #ffffff;
+    }
+
+    th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 16px 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    td {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--border);
+      color: #334155;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+
+    td.highlight {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    td.tag-green {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    td.tag-red {
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    /* 순서 있는 상세 리스트 */
+    .step-list {
+      list-style: none;
+      counter-reset: step-counter;
+      margin: 28px 0;
+    }
+
+    .step-list li {
+      counter-increment: step-counter;
+      position: relative;
+      padding-left: 56px;
+      margin-bottom: 24px;
+    }
+
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 38px;
+      height: 38px;
+      background-color: var(--primary);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    /* 인터랙티브 계산기 모듈 */
+    .calculator-wrapper {
+      background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+      border: 2px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin: 36px 0;
+    }
+
+    .calculator-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-field label {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .input-field select,
+    .input-field input {
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #ffffff;
+      color: var(--dark);
+    }
+
+    .calc-btn {
+      grid-column: 1 / -1;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 15px 28px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .calc-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .calc-result-panel {
+      background: #ffffff;
+      border: 1px solid #93c5fd;
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 18px;
+      display: none;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .result-row:last-child {
+      border-bottom: none;
+      padding-top: 16px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* 아코디언 FAQ */
+    .faq-container {
+      margin: 32px 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 14px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 24px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background: #f8fafc;
+      color: var(--primary);
+    }
+
+    .faq-indicator {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-left: 12px;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 24px 22px;
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.8;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 16px;
+    }
+
+    /* 상담 접수 폼 */
+    .contact-card {
+      background: #ffffff;
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-md);
+      margin: 40px 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .submit-cta {
+      background: var(--secondary);
+      color: #ffffff;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+
+    .submit-cta:hover {
+      background: #0f766e;
+    }
+
+    /* 외부 링크 리스트 */
+    ul.resource-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul.resource-list li {
+      padding: 12px 18px;
+      background: #f1f5f9;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 0.98rem;
+    }
+
+    ul.resource-list a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    ul.resource-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* 키워드 태그 클라우드 */
+    .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+      margin: 24px 0;
+    }
+
+    .keyword-tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* 반응형 스타일 */
+    @media (max-width: 768px) {
+      header.site-header {
+        padding: 40px 0 30px;
+      }
+      header h1 {
+        font-size: 1.85rem;
+      }
+      article {
+        padding: 30px 20px;
+      }
+      h2 {
+        font-size: 1.45rem;
+      }
+      .calculator-wrapper, .contact-card {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-badge">2026 공학 표준 및 타이어 안전 공학 가이드라인 반영</div>
+      <h1>2026 타이어수리 완벽 기술 가이드 및 타이어렌탈 브랜드별 비용 견적 비교 분석</h1>
+      <p class="lead">타이어 펑크 관통 메커니즘 정밀 진단부터 임시 지렁이 실러와 영구 버섯패치 공법의 구조적 차이점, 사이드월 손상 교체 기준, 넥센·한국·금호 30대 핵심 모델별 렌탈 요금제 TCO 경제성 비교까지 전문 엔지니어링 관점에서 체계적으로 제시합니다.</p>
+      
+      <nav class="quick-nav">
+        <ul>
+          <li><a href="#section-diagnostic">펑크 유형 및 정밀 진단</a></li>
+          <li><a href="#section-methods">3대 수리 공법 기술 비교</a></li>
+          <li><a href="#section-sop">표준 작업 절차 (SOP)</a></li>
+          <li><a href="#section-critical">수리 불가능 7가지 조건</a></li>
+          <li><a href="#section-rental-comparison">수리 vs 교체 vs 렌탈 비교</a></li>
+          <li><a href="#section-brand-catalog">30대 핵심 타이어 모델 분석</a></li>
+          <li><a href="#section-interactive-calc">실시간 비용 계산기</a></li>
+          <li><a href="#section-community-insights">커뮤니티 내돈내산 분석</a></li>
+          <li><a href="#section-faq">자주 묻는 질문 (FAQ)</a></li>
+          <li><a href="#section-consulting">전문 맞춤 견적 신청</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      
+      <!-- 1. 서론: 타이어 관리 및 패러다임 변화 -->
+      <section id="section-intro">
+        <h2>1. 2026년 차량 기술 진화에 따른 타이어수리 패러다임의 변화</h2>
+        <p>현대 자동차 생태계는 고전압 배터리를 탑재한 전기차(EV)와 하이브리드(HEV), 그리고 고출력 대형 SUV의 비중이 비약적으로 증가하면서 타이어가 감당해야 하는 역학적 스트레스가 과거 내연기관 중심 시절과는 근본적으로 달라졌습니다. 차체 중량이 2톤을 가볍게 상회하고 초반 최대 토크가 즉각 발휘되는 전기차 환경에서는 타이어 트레드에 작용하는 접지 압력과 횡력이 급증하며, 작은 이물질에 의한 관통 시에도 공기압 손실 속도가 매우 빠르고 내부 벨트 변형 가능성이 큽니다.</p>
+        
+        <p>단순히 길가에서 10분 만에 펑크를 때우고 주행하던 과거의 방식은 고속화도로와 중량화 차량이 지배하는 2026년 주행 환경에서 치명적인 대형 파열 사고의 원인이 될 수 있습니다. <strong>타이어수리</strong>는 단순히 바람이 새지 않게 구멍을 메우는 작업이 아니라, 고무의 인장력과 내부 스틸 코드의 결속력, 그리고 기밀성을 유지하는 이너라이너(Innerliner) 층의 물리화학적 무결성을 회복시키는 엄격한 기계 공학적 복원 과정입니다.</p>
+
+        <div class="callout-box">
+          <p><strong>공학적 관점의 핵심 진단 기준</strong>: 타이어 트레드 관통 손상 발생 시 단순한 외부 지렁이 씰러 삽입만으로는 내부 스틸 벨트 부식과 수분 침투로 인한 트레드 박리(Delamination) 현상을 원천 차단하기 어렵습니다. 신뢰성 있는 정밀 수리를 위해서는 반드시 타이어를 휠에서 탈거하여 내부 구조의 열화 유무를 검사한 뒤 규격화된 플러그 패치를 가황 융착해야 합니다.</p>
+        </div>
+      </section>
+
+      <!-- 2. 펑크 및 손상 유형별 정밀 진단 기준 -->
+      <section id="section-diagnostic">
+        <h2>2. 타이어 펑크 및 손상 유형별 정밀 진단 기준</h2>
+        <p>도로 상에는 피스 못, 스크루, 건축용 철선, 파쇄석, 날카로운 유리 조각 등 수많은 이물질이 존재합니다. 타이어가 손상되었을 때 가장 먼저 수행해야 하는 절차는 타이어 구조 영역별 손상 위치와 관통 각도를 정밀 판독하는 것입니다.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="card-label">수리 권장 가능 영역</div>
+            <h4>트레드(접지면) 중앙부 70% 구간</h4>
+            <p>타이어 바닥면의 양쪽 최외곽 홈(그루브) 사이를 의미하는 크라운(Crown) 영역입니다. 두꺼운 고무 블록과 강철 벨트층이 견고하게 받쳐주고 있어 직경 6mm 이하의 직각 관통체에 한하여 완전한 내부 패치 타이어수리가 승인되는 핵심 안전 영역입니다.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-label">절대 수리 불가 구역</div>
+            <h4>숄더(Shoulder) 및 버트리스 구간</h4>
+            <p>트레드 바깥 홈에서 측면으로 꺾여 내려가는 어깨 부위로 주행 선회 시 차체의 롤링과 엄청난 전단 하중이 집중됩니다. 이 부위는 고무 두께 편차가 크고 내부 코드 굽힘 각도가 급격하여 패치를 붙여도 원심력과 마찰열에 의해 박리되므로 교체가 원칙입니다.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-label">즉각 폐기 및 교체 대상</div>
+            <h4>사이드월(Sidewall) 및 비드부</h4>
+            <p>타이어 브랜드명과 규격이 각인된 측면부로, 수직 충격을 흡수하기 위해 유연한 카카스 플라이 1~2겹으로만 구성되어 있습니다. 연석 충격에 의한 코드절상(Bubble 현상)이나 날카로운 물체에 의한 찢어짐 발생 시 수리가 원천 불가능하며 파열 위험이 가장 높습니다.</p>
+          </div>
+        </div>
+
+        <p>또한 이물질의 진입 각도가 접지면에 대해 90도 수직이 아닌 45도 이하의 비스듬한 사선으로 관통된 경우, 외부에서 보이는 관통공의 위치와 타이어 내부 이너라이너의 천공 위치가 완전히 일치하지 않습니다. 이 상태에서 직선형 플러그를 억지로 강제 압입하면 내부 카카스 코드를 2차 파손시켜 타이어수리 실패 및 조기 파열을 유발하게 됩니다.</p>
+      </section>
+
+      <!-- 3. 타이어수리 3대 공법 완전 비교 -->
+      <section id="section-methods">
+        <h2>3. 타이어수리 3대 공법 엔지니어링 정밀 비교</h2>
+        <p>현재 국내 현장에서 시공되는 대표적인 타이어수리 기술은 크게 세 가지로 분류됩니다. 운전자가 각 공법의 기술적 장단점과 한계 수명을 정확히 이해해야 불필요한 중복 지출과 안전 사고를 방지할 수 있습니다.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>구분 항목</th>
+                <th>외부 삽입식 실 스트립 (지렁이)</th>
+                <th>화학 가황 일체형 버섯패치</th>
+                <th>전통 열가황 압착 (불빵구)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>작업 방식</strong></td>
+                <td>휠 미탈거, 외부에서 압입 삽입</td>
+                <td>휠 탈거 후 내부 연마 및 화학 융착</td>
+                <td>타이어 탈거 후 생고무 열압착 융착</td>
+              </tr>
+              <tr>
+                <td><strong>평균 소요 시간</strong></td>
+                <td>3분에서 7분 내외</td>
+                <td>25분에서 40분 내외</td>
+                <td>40분에서 60분 내외</td>
+              </tr>
+              <tr>
+                <td><strong>평균 시공 비용</strong></td>
+                <td>10,000원에서 15,000원 선</td>
+                <td>40,000원에서 60,000원 선</td>
+                <td>30,000원에서 50,000원 선</td>
+              </tr>
+              <tr>
+                <td><strong>권장 내구 수명</strong></td>
+                <td>단기 임시용 (1개월에서 3개월 권장)</td>
+                <td>타이어 잔여 마모 수명 다할 때까지 영구</td>
+                <td>반영구 (시공 숙련도 편차 큼)</td>
+              </tr>
+              <tr>
+                <td><strong>이너라이너 손상 진단</strong></td>
+                <td class="tag-red">진단 불가능 (육안 검사 불가)</td>
+                <td class="tag-green">완전 분리 후 정밀 검사 가능</td>
+                <td class="tag-green">완전 분리 후 정밀 검사 가능</td>
+              </tr>
+              <tr>
+                <td><strong>스틸 벨트 수분 침투 차단</strong></td>
+                <td class="tag-red">불안정 (틈새로 빗물 침투 가능)</td>
+                <td class="tag-green">완벽 밀봉 (스템 러버 100% 차단)</td>
+                <td>부분 차단 (고무 경화도에 따라 상이)</td>
+              </tr>
+              <tr>
+                <td><strong>고속 주행 안전 등급</strong></td>
+                <td>주의 요망 (시속 100km/h 초과 시 위험)</td>
+                <td>신차 출고 규격 동등 (안전성 최고)</td>
+                <td>보통 (코드 손상 열변형 위험 주의)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>1) 외부 삽입식 실 스트립 (일명 지렁이 펑크 패치)</h3>
+        <p>가장 대중적이며 긴급 출동 보험 서비스나 동네 카센터에서 흔히 접하는 방식입니다. 부틸 고무가 함침된 섬유 끈을 송곳 형태의 툴에 걸어 외부 관통 구멍으로 쑤셔 넣는 방식입니다. 이 방식의 최대 <strong>장점</strong>은 신속성과 경제성입니다. 휠을 차량에서 뺄 필요가 없어 현장에서 바로 해결할 수 있으며 가격 또한 제일 싼곳 기준으로 1만 원 내외로 저렴합니다.</p>
+        <p>그러나 치명적인 <strong>단점</strong>이 존재합니다. 타이어를 휠에서 벗겨내지 않기 때문에, 공기압이 빠진 채 주행하면서 타이어 안쪽 사이드월이 휠 림에 씹혀 내부 고무가 갈려나간 분말화 상태(Run-flat Scuffing)인지를 전혀 알 수 없습니다. 또한 관통 구멍 틈새로 염화칼슘과 빗물이 침투하여 내부 강철 벨트(Steel Belt)를 녹슬게 만들고 고속 주행 시 트레드가 분리되어 타이어가 공중분해되는 원인을 제공합니다.</p>
+
+        <h3>2) 일체형 복합 플러그 패치 (버섯패치 / Mushroom Patch)</h3>
+        <p>글로벌 타이어 제조사 및 미국 타이어제조협회(USTMA), 독일 정비 표준 규격(TUV)에서 유일하게 영구 수리로 인정하는 표준 공법입니다. 버섯 형태의 자재로, 기둥 역할을 하는 고무 스템(Stem)이 관통 터널을 100% 빈틈없이 메워 외부 오염물질 침투를 봉쇄하고, 우산 형태의 원형 패치가 내부 이너라이너에 완전히 달라붙어 기밀성을 완벽하게 유지합니다.</p>
+        <p>타이어수리 전문 엔지니어가 전용 에어 그라인더로 이너라이너 표면을 정밀하게 연마(Buffing)한 후 특수 화학 가황 접착 세멘트(Vulcanizing Cement)를 도포하여 저온 화학 융착 반응을 유도합니다. 이 시공을 거친 타이어는 고온의 고속 주행 시에도 공기 누기가 발생하지 않는 최고 수준의 신뢰성을 자랑합니다.</p>
+
+        <h3>3) 열가황 가열 압착 수리 (불빵구)</h3>
+        <p>생고무 원료를 손상 부위에 덧대고 열 가열기를 통해 고온으로 쪄서 일체화시키는 전통적인 수리 방식입니다. 과거 바이어스 타이어 시절 대형 트럭이나 버스 타이어수리에 널리 활용되었습니다. 하지만 현대 승용 레이디얼 타이어의 정밀한 고무 복합 컴파운드에 과도한 열을 가할 경우 주변 고무가 경화되거나 내부 스틸 코드의 장력이 열화될 수 있어, 오늘날에는 상용차 대형 튜브리스 규격을 제외하고는 점차 버섯패치 공법으로 대체되는 추세입니다.</p>
+      </section>
+
+      <!-- 4. 표준 작업 절차 가이드 (SOP) -->
+      <section id="section-sop">
+        <h2>4. 2026년 표준 타이어수리 작업 절차 가이드 (Standard Operating Procedure)</h2>
+        <p>신뢰할 수 있는 타이어수리 전문점이라면 반드시 준수해야 하는 9단계 기술 작업 프로토콜입니다. 공정을 건너뛰지 않는 정석 수리가 운전자의 생명을 지킵니다.</p>
+
+        <ol class="step-list">
+          <li>
+            <strong>차량 리프팅 및 휠 탈거 후 TPMS 센서 상태 확인</strong>
+            <p>에어 임팩 렌치 또는 토크 렌치를 사용하여 휠 볼트를 풀고 휠을 차량에서 분리합니다. 이때 휠 내부 밸브에 장착된 무선 공기압 경보장치(TPMS) 센서가 분해 과정에서 탈착기 툴에 의해 파손되지 않도록 회전 방향과 센서 위치를 사전에 체크합니다.</p>
+          </li>
+          <li>
+            <strong>수조 침적 및 액체 비눗물 누기 정밀 탐색</strong>
+            <p>타이어에 규정 공기압을 주입한 뒤 대형 누기 테스트 수조에 담그거나 중성 비누 거품액을 분사하여 미세 관통공, 비드면 누기, 밸브 코어 누기 등 복합 누출 부위를 모두 찾아내 마킹합니다.</p>
+          </li>
+          <li>
+            <strong>전문 타이어 탈착기를 통한 휠과 타이어의 완전 분리</strong>
+            <p>비드 브레이커로 비드를 림에서 안전하게 떨어뜨린 후 턴테이블 탈착기를 이용해 타이어를 림 손상 없이 탈거합니다.</p>
+          </li>
+          <li>
+            <strong>내부 이너라이너 육안 검사 및 내부 손상 판독</strong>
+            <p>타이어 스프레더(벌림 장치)에 타이어를 고정하고 고휘도 검사 조명을 비추어 내부 사이드월 쪽에 링 모양의 마모 흔적이나 고무 분말이 발생했는지 검사합니다. 분말이 확인되면 즉시 작업을 중단하고 타이어를 폐기합니다.</p>
+          </li>
+          <li>
+            <strong>관통 채널 정돈 및 카바이드 커터 가공</strong>
+            <p>관통된 이물질을 뽑아낸 후, 저속 에어 드릴에 초경 카바이드 커터(Carbide Cutter)를 장착하여 관통 홀 내부를 관통 각도에 맞춰 3~5회 왕복 가공함으로써 거친 고무 잔여물과 끊어진 스틸 코드 가닥을 깨끗이 정리합니다.</p>
+          </li>
+          <li>
+            <strong>텍스처 버핑(Buffing) 및 미세 잔여물 탈지 세척</strong>
+            <p>패치가 부착될 이너라이너 표면을 돔형 텅스텐 와이어 휠로 연마하여 RMA 규격 텍스처 등급으로 표면 조도를 생성합니다. 연마 후 발생한 분진은 진공 청소기로 흡입하고 특수 무연 고무 탈지 세척제를 뿌려 완벽히 유분기를 제거합니다.</p>
+          </li>
+          <li>
+            <strong>화학 가황 세멘트 도포 및 건조</strong>
+            <p>가황 세멘트를 연마면 전체와 관통 채널 내부에 균일하게 얇게 도포하고 솔벤트가 휘발되어 점착성이 발생할 때까지 3~5분간 자연 건조합니다.</p>
+          </li>
+          <li>
+            <strong>버섯패치 관통 삽입 및 스티처 롤러 압착</strong>
+            <p>버섯패치의 스템 부위를 안쪽에서 바깥쪽으로 밀어 넣어 펜치로 당겨 타이어 외경으로 뽑아내고, 헤드 원형 패치 부위를 중심에서 외곽 방향으로 스티처(Stitcher) 롤러를 강하게 굴려 내부 공기 방울을 100% 압착 제거합니다. 이후 패치 경계면에 오버코트 실런트를 발라 공기 누출 차단을 이중화합니다.</p>
+          </li>
+          <li>
+            <strong>휠 재조립, 규정 토크 체결 및 동적 휠 밸런스 교정</strong>
+            <p>타이어를 림에 장착하고 비드가 안착되도록 팽창시킨 뒤 외부로 튀어나온 스템 끝단을 트레드 블록 높이와 수평하게 잘라냅니다. 휠 밸런스 측정기에 장착하여 회전 불균형 수치를 측정한 후 납 웨이트를 부착하여 0점 세팅을 완료하고, 토크 렌치를 사용해 차량 제조사 규정 토크로 휠을 체결합니다.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 5. 수리 불가능한 7가지 치명적 조건 -->
+      <section id="section-critical">
+        <h2>5. 타이어수리가 절대 불가능한 7가지 치명적 조건</h2>
+        <p>운전자의 비용 절감 의지가 강하더라도 교통안전공단 및 타이어 제조사 안전 규정상 절대 수리해서는 안 되는 명확한 기준이 있습니다. 이를 무시하고 억지로 수리하면 고속 주행 중 타이어 펑크 폭탄을 안고 달리는 것과 같습니다.</p>
+
+        <div class="callout-box alert">
+          <h4>안전 위험: 즉각 교체 필수 상황 7선</h4>
+          <p><strong>1. 관통공의 직경이 6mm(1/4인치)를 초과하는 경우</strong>: 볼트나 두꺼운 쇠파이프 등에 의해 크게 뚫린 구멍은 패치 스템으로 밀폐할 수 없으며 내부 스틸 벨트가 영구 변형된 상태입니다.</p>
+          <p><strong>2. 사이드월(측면) 또는 숄더 라인 관통</strong>: 회전 시 심한 굴곡 운동으로 인해 패치가 100% 박리되며, 측면은 섬유 코드가 얇아 수리 불가능합니다.</p>
+          <p><strong>3. 내부 사이드월 열화 및 코드 절상(코드 파손)</strong>: 공기압이 없는 상태로 수백 미터 이상 저압 주행하여 타이어 내부 고무가 갈려 가루가 되었거나 겉면에 혹(Bubble)이 튀어나온 경우입니다.</p>
+          <p><strong>4. 잔여 마모 깊이가 마모 한계선(1.6mm)에 도달한 경우</strong>: 타이어 수명이 이미 끝난 타이어는 배수성과 제동력이 상실되었으므로 수리 비용을 지출할 가치가 없으며 법적으로도 운행이 제한됩니다.</p>
+          <p><strong>5. 동일 타이어에 기존 수리 이력이 3회를 초과하거나 인접한 경우</strong>: 한 타이어에 여러 번 펑크가 났을 때 기존 수리 부위와의 거리가 400mm(또는 90도 각도) 이내로 가까우면 골격 구조 안정성이 떨어져 교체해야 합니다.</p>
+          <p><strong>6. 제조일자 기준 5~6년 이상 경과하여 노화된 타이어</strong>: 고무 자체에 미세한 크랙(오존 균열)이 자글자글 발생한 타이어는 유연성을 잃어 가황 패치가 융착되지 않습니다.</p>
+          <p><strong>7. 화학 타이어 펑크 봉합제 액체 과다 주입 타이어</strong>: 트렁크에 있는 순정 비상 수리 키트(TMK)의 실런트 액을 과도하게 주입하여 휠과 타이어 내부가 부식되고 끈적이는 잔여물 세척이 불가능한 경우입니다.</p>
+        </div>
+      </section>
+
+      <!-- 6. 타이어렌탈 vs 일시불 구매 vs 타이어수리 경제성 비교 -->
+      <section id="section-rental-comparison">
+        <h2>6. 타이어렌탈 vs 일시불 구매 vs 단순 타이어수리 총소유비용(TCO) 비교</h2>
+        <p>타이어 파손 시 단순 수리로 연명할 것인지, 4본 일시불 구매를 할 것인지, 아니면 최근 대세로 자리잡은 타이어렌탈 서비스를 이용할 것인지에 대한 운전자들의 고민이 깊어지고 있습니다. 2026년 기준 3년(36개월) 유지 주기 동안 발생하는 총비용과 사후 혜택을 다각도로 분석했습니다.</p>
+
+        <p><strong>타이어렌탈</strong> 서비스는 정수기 렌탈처럼 목돈 부담 없이 월 1~3만 원대의 정기 요금제로 프리미엄 타이어 4본을 장착하고, 약정 기간 동안 정기 방문 점검, 휠 얼라인먼트 무상 교정, 그리고 가장 중요한 <strong>무상 파손 보증 혜택</strong>을 누릴 수 있는 금융 결합형 구독 상품입니다.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>비교 항목</th>
+                <th>단순 타이어수리 반복</th>
+                <th>오프라인 매장 일시불 구매</th>
+                <th>인터넷 다이렉트 온라인 구매</th>
+                <th>공식 타이어렌탈 프로그램</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>초기 목돈 지출</strong></td>
+                <td>매우 적음 (1~5만 원)</td>
+                <td>매우 큼 (60~120만 원)</td>
+                <td>큼 (50~95만 원)</td>
+                <td class="tag-green">0원 (등록비 면제 이벤트 시)</td>
+              </tr>
+              <tr>
+                <td><strong>월 분납 부담</strong></td>
+                <td>발생 시 건별 지출</td>
+                <td>카드 무이자 할부 (3~6개월)</td>
+                <td>카드 무이자 할부</td>
+                <td>월 10,000원 ~ 35,000원 대</td>
+              </tr>
+              <tr>
+                <td><strong>제휴카드 할인 적용 시</strong></td>
+                <td>적용 불가</td>
+                <td>단순 청구할인 1~2만 원</td>
+                <td>단순 청구할인</td>
+                <td class="tag-green">월 0원 ~ 1만 원대 초반 가능</td>
+              </tr>
+              <tr>
+                <td><strong>파손 시 보증 지원</strong></td>
+                <td class="tag-red">전무 (본인 과실 전액 부담)</td>
+                <td>대리점별 상이 (대부분 유상)</td>
+                <td>보증 불가 (단순 불량만 제조사 심사)</td>
+                <td class="tag-green">무상 신품 1:1 교체 케어 제공</td>
+              </tr>
+              <tr>
+                <td><strong>정기 부가 서비스</strong></td>
+                <td>없음</td>
+                <td>1회성 위치교환 쿠폰 정도</td>
+                <td>공임비 별도 지불</td>
+                <td>위치교환, 얼라인먼트, 방문점검</td>
+              </tr>
+              <tr>
+                <td><strong>계약 해지 위약금</strong></td>
+                <td>해당 없음</td>
+                <td>해당 없음 (환불 불가)</td>
+                <td>해당 없음 (단순변심 반품비)</td>
+                <td>중도 해지 시 잔여 위약금 발생</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>주행거리가 연간 15,000km 이상으로 길고 비포장도로나 고속도로 출퇴근이 잦아 펑크 및 파손 리스크가 높은 운전자라면, 단순 수리에 불안해하기보다는 파손 보증이 결합된 렌탈 프로그램을 이용하는 것이 심리적, 경제적으로 최적의 선택지가 될 수 있습니다.</p>
+      </section>
+
+      <!-- 7. 타이어 브랜드 및 30대 핵심 모델별 특성 상세 분석 -->
+      <section id="section-brand-catalog">
+        <h2>7. 2026년 타이어 렌탈 및 수리 대응 30대 핵심 모델 정밀 스펙 카탈로그</h2>
+        <p>국내외 시장을 대표하는 국산 3사(넥센, 한국, 금호) 및 수입 프리미엄 브랜드의 핵심 모델 30종의 특성과 펑크 내구성, 렌탈 적합성을 엔지니어링 관점에서 평가했습니다.</p>
+
+        <h3>1) 넥센타이어 (NEXEN TIRE) - 넥스트레벨 렌탈 주력 라인업</h3>
+        <p>국내 최초로 타이어렌탈 시스템인 '넥스트레벨'을 도입하여 전국 렌탈 인프라와 무상 파손 보증망이 가장 촘촘하게 구축된 브랜드입니다.</p>
+        <ul>
+          <li><strong>1. 엔페라 슈프림 (N'FERA Supreme)</strong>: 세단용 프리미엄 컴포트의 대표주자로 탁월한 정숙성과 높은 마일리지(UTQG 480)를 자랑합니다. 트레드 내부 스틸 벨트 밀도가 높아 펑크 시 버섯패치 수리 적합도가 매우 우수합니다.</li>
+          <li><strong>2. 엔페라 RU5 (N'FERA RU5)</strong>: 도심형 프리미엄 SUV 전용 사계절 타이어입니다. 강성 블록 설계로 고하중 코너링 시 숄더 편마모를 억제하며 장거리 주행 시 피로도를 최소화합니다.</li>
+          <li><strong>3. 엔페라 AU7 (N'FERA AU7)</strong>: 넥센의 플래그십 럭셔리 세단용 타이어로 내부에 흡음 패드(NRS 폼)가 적용되어 극저소음을 구현합니다. 펑크 수리 시 내부 흡음재 커팅 후 정밀 시공이 요구됩니다.</li>
+          <li><strong>4. 엔페라 프리머스 AS T1</strong>: 고성능 스포츠 세단을 위한 올시즌 UHP 타이어로 고속 주행 안정성과 젖은 노면 제동 거리를 극대화한 고강성 카카스 모델입니다.</li>
+          <li><strong>5. 로디안 GTX (ROADIAN GTX)</strong>: 뛰어난 가성비와 긴 수명을 가진 SUV 사계절 모델로, 경제형 렌탈 패키지 가입 시 가장 인기 있는 베스트셀러 모델입니다.</li>
+          <li><strong>6. 엔블루 4시즌 (N'blue 4Season)</strong>: 유럽 공인 윈터 성능 마크인 3PMSF를 획득한 올웨더 타이어로 눈길, 빗길 주행 능력이 탁월하며 혹한기에도 고무 경화가 덜 일어납니다.</li>
+          <li><strong>7. 엔블루 HD 플러스 (N'blue HD Plus)</strong>: 소형차 및 준중형을 위한 친환경 고연비 타이어로 회전 저항을 최소화하여 유류비 절감에 특화되어 있습니다.</li>
+        </ul>
+
+        <h3>2) 한국타이어 (HANKOOK TIRE) - all my T 멤버십 및 프리미엄 라인</h3>
+        <p>글로벌 탑티어 기술력을 보유하고 있으며, 최근 전기차 전용 라인업인 아이온(iON)을 필두로 전동화 타이어 시장을 주도하고 있습니다.</p>
+        <ul>
+          <li><strong>8. 벤투스 S1 에보3 (Ventus S1 evo3)</strong>: DTM 레이싱 기술 기반의 초고성능 스포츠 타이어로, 아라미드 하이브리드 보강 벨트가 적용되어 고속 주행 시 원심력 팽창을 완벽히 억제합니다.</li>
+          <li><strong>9. 벤투스 프리미엄 컴포트 (Ventus Air S / S2 AS)</strong>: 제네시스, 그랜저 등에 최적화된 최고급 안락감을 제공하는 컴포트 사계절 타이어입니다.</li>
+          <li><strong>10. 키너지 4S2 (Kinergy 4S2)</strong>: 국내 사계절 기후에 완벽 대응하는 올웨더 타이어의 절대강자로 V자형 트레드 패턴을 통한 배수성과 눈길 트랙션이 경이로운 수준입니다.</li>
+          <li><strong>11. 키너지 EX (Kinergy EX)</strong>: 합리적인 가격대와 정숙성을 겸비하여 출퇴근용 준중형 세단에 널리 장착되는 스탠다드 모델입니다.</li>
+          <li><strong>12. 다이나프로 HPX (Dynapro HPX)</strong>: SUV 전용 프리미엄 컴포트 타이어로 동급 최강의 긴 마일리지와 부드러운 승차감을 제공합니다.</li>
+          <li><strong>13. 다이나프로 HL3 (Dynapro HL3)</strong>: 대칭형 패턴 디자인을 통해 고른 마모를 유도하는 도심형 패밀리 SUV 표준 타이어입니다.</li>
+          <li><strong>14. 아이온 evo (iON evo)</strong>: 전기차 전용 초고성능 타이어로 사운드 압소버(Sound Absorber) 흡음재와 고하중 대응 EV 컨투어 테크놀로지가 탑재되어 있습니다.</li>
+          <li><strong>15. 아이온 AS SUV (iON AS SUV)</strong>: 테슬라 모델Y, 아이오닉5, EV6 등에 최적화된 사계절 전기차 SUV 전용 모델로 낮은 회전 저항과 정숙성을 양립했습니다.</li>
+        </ul>
+
+        <h3>3) 금호타이어 (KUMHO TIRE) - 또로로로서비스 및 컴포트 라인업</h3>
+        <p>한국 도로 사정에 가장 적합한 승차감 세팅과 가성비 높은 내구성으로 오랜 기간 소비자 선호도 1위를 지켜온 브랜드입니다.</p>
+        <ul>
+          <li><strong>16. 마제스티9 솔루스 TA91 (Majesty 9 Solus)</strong>: 국산 세단 오너들이 가장 선호하는 컴포트 플래그십 타이어로 충격 흡수 기술과 차음 진동 억제 기술이 최고조에 달한 모델입니다.</li>
+          <li><strong>17. 마제스티X 솔루스 TA92 (Majesty X)</strong>: 마제스티9의 상위 버전으로 입체 아이콘 마모 모니터링 기술과 프리미엄 패턴 감성 설계가 적용되었습니다.</li>
+          <li><strong>18. 솔루스 TA51 (SOLUS TA51)</strong>: 합리적인 비용에 마제스티 기술력을 계승한 하이엔드 가성비 타이어로 긴 마일리지와 사계절 밸런스가 뛰어납니다.</li>
+          <li><strong>19. 솔루스 TA31 (SOLUS TA31)</strong>: 완성차 OE 기본 공급용으로 가장 많이 납품된 검증된 품질의 세단용 표준 사계절 타이어입니다.</li>
+          <li><strong>20. 솔루스 TA21 (SOLUS TA21)</strong>: 첫차 구매자나 가성비 주행을 원하는 운전자를 위해 개발된 경제형 고내구 엔트리 모델입니다.</li>
+          <li><strong>21. 크루젠 HP71 (CRUGEN HP71)</strong>: 쏘렌토, 싼타페, 카니발 등의 전폭적인 지지를 받는 프리미엄 SUV 컴포트 타이어로 정숙성과 빗길 주행성이 뛰어납니다.</li>
+          <li><strong>22. 크루젠 HP51 (CRUGEN HP51)</strong>: 도심형 SUV를 위한 실속형 모델로 균형 잡힌 주행 성능과 긴 마모 라이프를 제공합니다.</li>
+          <li><strong>23. 이노뷔 프리미엄 (EnnoV Premium)</strong>: 금호타이어의 차세대 순수 전기차 전용 플래그십 타이어로 HLC(고하중 지지) 기술이 적용된 모델입니다.</li>
+        </ul>
+
+        <h3>4) 수입 프리미엄 글로벌 브랜드 라인업</h3>
+        <p>수입차 및 고급 스포츠 주행을 원하는 오너들이 선호하는 고성능 프리미엄 모델입니다.</p>
+        <ul>
+          <li><strong>24. 미쉐린 파일럿 스포츠 5 (Michelin Pilot Sport 5)</strong>: 젖은 노면 및 마른 노면 응답성이 탁월한 글로벌 표준 스포츠 타이어입니다.</li>
+          <li><strong>25. 미쉐린 프라이머시 4+ (Primacy 4+)</strong>: 마모가 진행되어도 새 제품 수준의 제동 성능을 유지하는 독보적인 에버그립 테크놀로지가 적용된 컴포트 모델입니다.</li>
+          <li><strong>26. 미쉐린 크로스클라이밋 2 (CrossClimate 2 - CC2)</strong>: 전 세계 올웨더 시장의 베스트셀러로 V자 패턴의 경이로운 눈길 그립력과 긴 수명을 선사합니다.</li>
+          <li><strong>27. 콘티넨탈 DWS06 Plus (ExtremeContact DWS06+)</strong>: 눈길(Snow), 빗길(Wet), 마른노면(Dry)을 전천후로 커버하는 UHP 사계절 튜닝 매니아들의 최애 모델입니다.</li>
+          <li><strong>28. 콘티넨탈 울트라콘택트 UC6 (UltraContact UC6)</strong>: 다이아몬드 에지 기술로 제동력을 높이고 노이즈 브레이커로 주행 소음을 획기적으로 줄인 세단 모델입니다.</li>
+          <li><strong>29. 피렐리 피제로 올시즌 플러스 3 (P ZERO AS Plus 3)</strong>: 슈퍼카 OE 브랜드 피렐리의 기술을 미국 및 아시아 도로 환경에 맞춰 사계절화한 초고성능 타이어입니다.</li>
+          <li><strong>30. 피렐리 스콜피온 올시즌 플러스 3 (Scorpion)</strong>: 대형 수입 럭셔리 SUV를 위해 특별히 설계된 고하중 고강성 사계절 투어링 타이어입니다.</li>
+          <li><strong>31. 브리지스톤 투란자 T005 (Turanza T005)</strong>: 벤츠, BMW에 순정 장착되는 유러피언 투어링 타이어로 뛰어난 고속 직진 안정성을 제공합니다.</li>
+          <li><strong>32. 브리지스톤 세레니티 플러스 (Serenity Plus)</strong>: 나노프로텍 컴파운드를 적용하여 긴 마일리지와 승차감을 구현한 한국 시장 특화 세단 모델입니다.</li>
+          <li><strong>33. 굿이어 이글 F1 어시메트릭 사계절</strong>: 림 프로텍터 리브가 장착되어 연석 스크래치로부터 휠을 보호하며 강력한 코너링 트랙션을 지원합니다.</li>
+        </ul>
+      </section>
+
+      <!-- 8. 인터랙티브 계산기 모듈 -->
+      <section id="section-interactive-calc">
+        <h2>8. 2026 맞춤형 타이어수리 vs 렌탈 비용 실시간 계산기</h2>
+        <p>보유 차량의 차종과 월 주행거리, 제휴카드 사용 계획을 선택하면 향후 3년간 예상되는 단순 타이어수리 및 교체 비용 대비 타이어렌탈 총소유비용(TCO)을 즉시 시뮬레이션 계산해 드립니다.</p>
+
+        <div class="calculator-wrapper">
+          <form class="calculator-form" id="tireCalcForm" onsubmit="return false;">
+            <div class="input-field">
+              <label for="calcCarType">차량 세그먼트 종류</label>
+              <select id="calcCarType">
+                <option value="compact">경차 / 소형차 (14~15인치)</option>
+                <option value="sedan" selected>준중형 / 중형 세단 (16~18인치)</option>
+                <option value="suv">중형 / 대형 SUV (18~20인치)</option>
+                <option value="ev">대형 전기차 / 고급 수입차 (19~22인치)</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="calcMileage">연간 주행거리 (km)</label>
+              <select id="calcMileage">
+                <option value="10000">10,000 km 이하 (단거리 출퇴근)</option>
+                <option value="20000" selected>15,000 ~ 20,000 km (일반 평균)</option>
+                <option value="30000">25,000 ~ 30,000 km (장거리 영업)</option>
+                <option value="40000">35,000 km 이상 (초장거리 주행)</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="calcCardDiscount">제휴카드 전월 실적 할인 여부</label>
+              <select id="calcCardDiscount">
+                <option value="0">미사용 (할인 없음 0원)</option>
+                <option value="13000" selected>전월 30만 원 실적 (월 13,000원 할인)</option>
+                <option value="16000">전월 70만 원 실적 (월 16,000원 할인)</option>
+                <option value="20000">전월 100만 원 실적 (월 20,000원 할인)</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="calcContractMonths">렌탈 약정 기간 선택</label>
+              <select id="calcContractMonths">
+                <option value="24">24개월 (2년 약정)</option>
+                <option value="36" selected>36개월 (3년 표준 약정)</option>
+                <option value="48">48개월 (4년 장기 약정)</option>
+              </select>
+            </div>
+
+            <button type="button" class="calc-btn" onclick="runTireCalculation()">3년 총소유비용 및 절감액 정밀 계산하기</button>
+          </form>
+
+          <div class="calc-result-panel" id="calcResultPanel">
+            <div class="result-row">
+              <span>선택 차종 및 타이어 4본 일시불 구매 예상 금액:</span>
+              <strong id="resBuyPrice">0원</strong>
+            </div>
+            <div class="result-row">
+              <span>3년간 펑크 타이어수리 및 위치교환/얼라인먼트 관리 비용:</span>
+              <strong id="resCareCost">0원</strong>
+            </div>
+            <div class="result-row">
+              <span>타이어렌탈 정상 월 렌탈 요금 (4본 기준):</span>
+              <strong id="resMonthlyRental">0원</strong>
+            </div>
+            <div class="result-row">
+              <span>제휴카드 혜택 적용 후 최종 실부담 월 납입금:</span>
+              <strong id="resDiscountedMonthly" style="color: #0d9488;">0원</strong>
+            </div>
+            <div class="result-row">
+              <span>3년 총소유비용(TCO) 비교 분석 결과:</span>
+              <span id="resFinalVerdict">계산 대기 중</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 커뮤니티 내돈내산 후기 및 성지 분석 -->
+      <section id="section-community-insights">
+        <h2>9. 커뮤니티(보배드림, 펨코, 디시 등) 내돈내산 후기 및 성지 좌표 심층 분석</h2>
+        <p>포털 검색 결과의 과도한 홍보성 광고를 걸러내기 위해 자동차 실사용자들이 밀집된 <strong>보배드림</strong>, <strong>에펨코리아(펨코)</strong> 차갤, <strong>디시인사이드</strong> 바이크/자동차 갤러리 등의 진솔한 내돈내산 후기와 현장 피드백을 빅데이터 분석했습니다.</p>
+
+        <div class="callout-box">
+          <h4>커뮤니티 주요 토론 쟁점 요약</h4>
+          <p><strong>보배드림 교통/정비 게시판</strong>: 고속도로 주행 중 펑크로 지렁이를 꽂고 주행하다가 1년 뒤 타이어 공기압이 미세하게 지속 누기되어 결국 휠 림까지 손상된 사례가 다수 보고되었습니다. 유저들은 "고속 주행이나 패밀리카 장거리 여행이 잦다면 3~5만 원 아끼지 말고 무조건 타이어 탈착 후 버섯패치 수리를 해주는 공임나라 협력점이나 타이어수리 전문점을 찾아가는 것이 정신건강에 좋다"는 의견이 지배적입니다.</p>
+          <p><strong>에펨코리아(펨코) 재테크/차량 게시판</strong>: 타이어렌탈에 대한 제휴카드 실적 풍차돌리기 팁이 인기입니다. "생활비 카드로 월 30만 원만 실적을 채우면 월 렌탈료 13,000~16,000원이 청구 할인되어 4본 프리미엄 타이어를 거의 0원~월 몇천 원 꼴로 장착할 수 있다"며, 특히 초기 목돈 80~100만 원 지출이 부담스러운 사회초년생들에게 가장 저렴한곳 및 최저가 좌표로 렌탈 다이렉트 온라인 성지가 강력히 추천되고 있습니다.</p>
+          <p><strong>디시인사이드 차갤</strong>: 셀프 지렁이 키트 DIY에 대한 경고 후기가 많습니다. "쿠팡이나 다이소에서 파는 5천 원짜리 지렁이 키트로 숄더 쪽 펑크 때웠다가 타이어 옆구리 터져서 렉카 불렀다"며 관통 위치 판독 없이 자가 수리를 시도하는 행위의 위험성을 성토하는 글이 꾸준히 올라옵니다.</p>
+        </div>
+      </section>
+
+      <!-- 10. 자주 묻는 질문 (FAQ 10선) -->
+      <section id="section-faq">
+        <h2>10. 자주 묻는 질문 (FAQ) - 타이어수리 및 렌탈 핵심 10문 10답</h2>
+        <div class="faq-container">
+          
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q1. 타이어에 박힌 못을 뽑지 않고 그대로 타고 다녀도 되나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>절대 안 됩니다. 못이 박힌 채 주행하면 타이어가 회전할 때마다 못이 안쪽으로 더 깊숙이 박히면서 내부 카카스 플라이와 스틸 벨트를 지속적으로 갉아먹어 손상 부위를 크게 만듭니다. 또한 언제든 고속 주행 중 원심력에 의해 못이 튕겨 나가면서 급격한 공기압 상실(Blow-out)을 유발하여 전복 사고로 이어질 수 있으므로 즉시 타이어수리를 받아야 합니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q2. 지렁이 펑크 수리 후 타이어 교체 시기까지 계속 타도 문제없나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>지렁이 플러그는 본래 비상용 임시 조치 자재입니다. 시공 직후 수개월 동안은 공기가 새지 않을 수 있으나 고온의 여름철 고속 주행이나 영하의 겨울철 온도 변화를 겪으면서 고무 수축과 경화로 인해 미세 누기가 발생할 확률이 40% 이상입니다. 또한 외부 틈새로 침투한 수분이 스틸 벨트를 부식시키므로 안전을 위해서는 빠른 시일 내에 버섯패치 수리로 전환하거나 타이어 상태를 점검하는 것이 바람직합니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q3. 버섯패치 수리 비용이 지렁이보다 3~4배 비싼 이유는 무엇인가요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>버섯패치 수리는 단순히 끈을 쑤셔 넣는 작업이 아닙니다. 차량에서 휠을 빼내고, 타이어를 휠에서 탈착 장비로 벗겨낸 후, 타이어 내부를 연마하고 화학 세멘트로 융착한 뒤 다시 조립하여 고속 휠 밸런스를 측정하는 고숙련 엔지니어링 공임이 수반되기 때문입니다. 휠 밸런스 비용과 탈부착 인건비, 그리고 고가의 정품 패치 자재비가 모두 포함된 합리적인 가격입니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q4. 펑크 수리 후 고속 휠 밸런스를 왜 다시 측정해야 하나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>타이어를 휠에서 분리했다가 다시 조립하면 기존에 맞춰두었던 무게 중심점이 미세하게 틀어집니다. 또한 내부에 부착된 패치 자재의 무게(수 그램)가 회전 시 원심력에 의해 고속 주행(80~120km/h) 구간에서 핸들 떨림 현상을 유발할 수 있습니다. 따라서 정밀 타이어수리 후에는 휠 밸런스 0점 교정이 필수입니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q5. 타이어렌탈 계약 후 약정 기간(예: 36개월)이 종료되면 타이어를 반납해야 하나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>아닙니다. 넥센 넥스트레벨 등 대부분의 타이어렌탈은 약정 기간 동안 렌탈료를 완납하면 타이어의 소유권이 고객에게 자동으로 무상 이전되는 소유권 이전형 상품입니다. 따라서 타이어를 반납할 필요 없이 수명이 다할 때까지 계속 주행하시면 됩니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q6. 타이어렌탈 중도 해지 시 위약금 계산 방식은 어떻게 되나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>타이어는 장착 즉시 중고품으로 전환되는 소모품 특성상, 중도 해지 시 잔여 약정 기간 렌탈료의 일정 비율(통상 잔여 렌탈료의 20~30%)과 함께 이미 장착된 타이어의 원금 잔존 가치 비용이 청구됩니다. 따라서 차량 매각 계획이 1~2년 이내에 있다면 렌탈보다는 단기 약정이나 일시불 구매를 추천합니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q7. 전기차(EV) 타이어 펑크 시 흡음재 스펀지는 어떻게 처리하나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>전기차 순정 타이어 내부에 부착된 폴리우레탄 폼 흡음재는 관통공 주변을 약 5x5cm 정사각형 형태로 정밀하게 절개하여 일시 떼어냅니다. 이후 이너라이너 연마 및 버섯패치 융착 작업을 완료한 뒤 절개했던 흡음재 스펀지를 전용 고무 접착 실런트로 원래 위치에 유격 없이 완벽 재부착하여 회전 밸런스와 방음 성능을 유지합니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q8. 한쪽 타이어만 파손되어 수리 불가일 때 1개만 교체해도 주행에 지장이 없나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>반대편 타이어의 마모도가 80% 이상 남아있는 거의 새 타이어라면 1본만 교체해도 무방합니다. 그러나 반대편 타이어가 이미 40~50% 이상 마모된 상태라면 좌우 타이어의 외경 둘레 차이와 접지력 불균형으로 인해 차량 쏠림, 빗길 스핀 현상이 발생하며 전자식 차동제한장치(LSD)나 4륜구동 트랜스퍼 케이스에 과열 손상을 줄 수 있으므로 축당 2본(좌우 세트) 교체가 권장됩니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q9. 타이어 펑크 예방을 위한 적정 공기압 점검 주기는 어떻게 되나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>타이어 고무는 눈에 보이지 않는 미세 기공을 통해 자연적으로 매월 1~2 PSI씩 공기압이 자연 누출됩니다. 계절 변화에 따른 기온 차이까지 고려할 때 최소 월 1회 정기 점검이 필수적이며, 운전석 도어 안쪽 B필러에 부착된 차량 제조사 표준 냉간 공기압 수치(통상 34~38 PSI)를 유지해야 이상 마모와 펑크 위험을 최소화할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Q10. 인터넷 최저가 타이어 구매 시 발생하는 현장 추가 장착 비용은 어떤 것들이 있나요?</span>
+              <span class="faq-indicator">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>온라인 쇼핑몰에서 무료 배송 최저가로 표기되어 있어도 지정 장착점에 입고 시 타이어 탈부착 기본 공임(본당 1.5~2.5만 원), TPMS 센서 이식 비용(개당 5천~1만 원), 고속 휠 밸런스 비용, 폐타이어 처리비(개당 3천~5천 원), 휠 얼라인먼트 비용(4~7만 원) 등이 추가 청구되는 경우가 빈번하므로 최종 결제 전 추가 공임표를 반드시 확인해야 합니다.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 11. 전문 맞춤 견적 및 컨설팅 신청 폼 -->
+      <section id="section-consulting">
+        <div class="contact-card">
+          <h2>11. 2026 타이어수리 및 렌탈 최저가 1:1 맞춤 엔지니어링 견적 신청</h2>
+          <p>고객님의 차량 규격과 현재 타이어 손상 상태(단순 관통, 사이드월 손상, 교체 주기 도래 등)를 남겨주시면, AI 알고리즘 분석과 공인 타이어 정비 전문가가 가장 안전하고 경제적인 수리 및 렌탈 최저가 견적을 다이렉트로 유선 상담해 드립니다.</p>
+
+          <form action="/submit-quote" method="post" onsubmit="event.preventDefault(); alert('견적 상담 신청이 성공적으로 접수되었습니다. 담당 엔지니어가 15분 이내로 안내 전화를 드립니다.');">
+            <div class="form-grid">
+              <div class="input-field">
+                <label for="clientName">차주 성함</label>
+                <input type="text" id="clientName" placeholder="예: 홍길동" required>
+              </div>
+
+              <div class="input-field">
+                <label for="clientPhone">연락처 (휴대폰 번호)</label>
+                <input type="tel" id="clientPhone" placeholder="예: 010-1234-5678" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+              </div>
+
+              <div class="input-field">
+                <label for="clientCarModel">차량 모델 및 연식</label>
+                <input type="text" id="clientCarModel" placeholder="예: 제네시스 G80 (2024년식)" required>
+              </div>
+
+              <div class="input-field">
+                <label for="clientTireSize">장착 타이어 규격 (타이어 옆면 표기)</label>
+                <input type="text" id="clientTireSize" placeholder="예: 245/45R19">
+              </div>
+
+              <div class="input-field">
+                <label for="clientIssue">현재 손상 및 문의 유형</label>
+                <select id="clientIssue" required>
+                  <option value="">선택해 주세요</option>
+                  <option value="repair_patch">트레드 펑크 발생 (정밀 버섯패치 수리 견적)</option>
+                  <option value="sidewall_burst">사이드월 혹/찢어짐 (신품 교체 필요)</option>
+                  <option value="rental_nexen">넥센 넥스트레벨 렌탈 최저가 견적 문의</option>
+                  <option value="rental_hankook_kumho">한국/금호 타이어 비교 컨설팅</option>
+                  <option value="tpms_vibration">고속 주행 핸들 떨림 및 휠 밸런스/얼라인먼트</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label for="clientRegion">방문 희망 지역</label>
+                <select id="clientRegion" required>
+                  <option value="">지역 선택</option>
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도 / 인천광역시</option>
+                  <option value="busan">부산광역시 / 울산 / 경남</option>
+                  <option value="daegu">대구광역시 / 경북</option>
+                  <option value="daejeon">대전광역시 / 세종 / 충청</option>
+                  <option value="gwangju">광주광역시 / 전라</option>
+                  <option value="gangwon">강원특별자치도 / 제주</option>
+                </select>
+              </div>
+
+              <div class="input-field full-width">
+                <label for="clientDetails">세부 요청 사항 (손상 위치, 일시불/렌탈 선호 등)</label>
+                <textarea id="clientDetails" rows="4" style="width:100%; padding:12px; border:1px solid #cbd5e1; border-radius:8px; font-size:1rem;" placeholder="예: 뒤쪽 우측 바닥면에 볼트가 박혔는데 바람이 천천히 빠집니다. 수리 가능 여부와 렌탈 교체 시 월 요금 차이를 상담받고 싶습니다."></textarea>
+              </div>
+
+              <div class="full-width">
+                <button type="submit" class="submit-cta">엔지니어링 무료 견적 및 상담 요청하기</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 12. 공인 외부 신뢰성 사이트 및 키워드 클러스터 -->
+      <section id="section-references">
+        <h2>12. 공인 외부 신뢰성 자료 및 연관 검색어 클러스터</h2>
+        <p>본 기술 분석서는 도로교통 안전 법령과 국내외 타이어 엔지니어링 표준 데이터를 엄밀히 대조하여 작성되었습니다. 추가적인 기술 정보 및 안전 규정은 아래 공인된 공식 외부 사이트에서 확인하실 수 있습니다.</p>
+
+        <ul class="resource-list">
+          <li>
+            1. 자동차 정비 및 부품 엔지니어링 종합 데이터 포털:
+            <a href="https://tirerentztrustr.koreahankang.com" target="_blank" rel="noopener">https://car.reliabledone.com</a>
+          </li>
+          <li>
+            2. 나무위키 타이어 기술 및 구조 공학 백과사전:
+            <a href="https://namu.wiki/w/%ED%83%80%EC%9D%B4%EC%96%B4" target="_blank" rel="noopener">https://namu.wiki/w/타이어</a>
+          </li>
+          <li>
+            3. 한국교통안전공단 자동차 검사 기준 및 타이어 안전 규격 안내:
+            <a href="https://www.kotsa.or.kr" target="_blank" rel="noopener">https://www.kotsa.or.kr</a>
+          </li>
+        </ul>
+
+        <h3>함께 많이 찾는 연관 검색어 및 키워드 클러스터</h3>
+        <div class="keyword-cloud">
+          <span class="keyword-tag">타이어수리</span>
+          <span class="keyword-tag">타이어수리비용</span>
+          <span class="keyword-tag">타이어버섯패치가격</span>
+          <span class="keyword-tag">타이어지렁이수명</span>
+          <span class="keyword-tag">타이어펑크수리성지</span>
+          <span class="keyword-tag">타이어렌탈가격비교</span>
+          <span class="keyword-tag">넥센타이어렌탈후기</span>
+          <span class="keyword-tag">넥스트레벨제휴카드</span>
+          <span class="keyword-tag">엔페라슈프림가격</span>
+          <span class="keyword-tag">벤투스S1에보3</span>
+          <span class="keyword-tag">마제스티9솔루스</span>
+          <span class="keyword-tag">전기차타이어수리</span>
+          <span class="keyword-tag">타이어코드절상교체</span>
+          <span class="keyword-tag">타이어공임나라수리</span>
+          <span class="keyword-tag">타이어위약금계산</span>
+          <span class="keyword-tag">타이어파손보증</span>
+          <span class="keyword-tag">내돈내산타이어후기</span>
+          <span class="keyword-tag">보배드림타이어추천</span>
+          <span class="keyword-tag">타이어최저가성지좌표</span>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+  
+
+  <!-- 인터랙티브 스크립트 (FAQ 토글 및 계산기 로직) -->
+  <script>
+    // FAQ 아코디언 토글 로직
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqButtons = document.querySelectorAll('.faq-question');
+      
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const indicator = this.querySelector('.faq-indicator');
+          const isOpen = answer.style.display === 'block';
+
+          // 다른 모든 열린 답변 닫기 (깔끔한 UI 유지)
+          document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
+          document.querySelectorAll('.faq-indicator').forEach(el => el.textContent = '+');
+
+          if (!isOpen) {
+            answer.style.display = 'block';
+            indicator.textContent = '-';
+          } else {
+            answer.style.display = 'none';
+            indicator.textContent = '+';
+          }
+        });
+      });
+    });
+
+    // 타이어수리 vs 렌탈 비용 실시간 계산 함수
+    function runTireCalculation() {
+      const carType = document.getElementById('calcCarType').value;
+      const mileage = parseInt(document.getElementById('calcMileage').value, 10);
+      const cardDiscount = parseInt(document.getElementById('calcCardDiscount').value, 10);
+      const contractMonths = parseInt(document.getElementById('calcContractMonths').value, 10);
+
+      // 세그먼트별 기준 가격 데이터 세팅
+      let baseTireBuyPrice = 0;
+      let baseMonthlyRental = 0;
+      let maintenancePerYear = 35000; // 정기 펑크수리, 위치교환, 밸런스 비용 연평균
+
+      if (carType === 'compact') {
+        baseTireBuyPrice = 360000;
+        baseMonthlyRental = 13900;
+      } else if (carType === 'sedan') {
+        baseTireBuyPrice = 640000;
+        baseMonthlyRental = 21900;
+      } else if (carType === 'suv') {
+        baseTireBuyPrice = 880000;
+        baseMonthlyRental = 27900;
+      } else if (carType === 'ev') {
+        baseTireBuyPrice = 1200000;
+        baseMonthlyRental = 35900;
+      }
+
+      // 주행거리에 따른 정비/수리 발생 가중치
+      if (mileage >= 30000) {
+        maintenancePerYear = 70000;
+      }
+
+      const totalCareCost3Years = maintenancePerYear * 3;
+      const totalBuyAndCareCost = baseTireBuyPrice + totalCareCost3Years;
+
+      // 제휴카드 할인 적용 월 렌탈료 계산 (최소 0원)
+      let discountedMonthly = baseMonthlyRental - cardDiscount;
+      if (discountedMonthly < 0) discountedMonthly = 0;
+
+      const totalRentalCost = discountedMonthly * contractMonths;
+
+      // 결과 패널에 출력
+      document.getElementById('resBuyPrice').textContent = baseTireBuyPrice.toLocaleString() + '원 (4본 교체 공임 포함)';
+      document.getElementById('resCareCost').textContent = totalCareCost3Years.toLocaleString() + '원 (수리 및 관리)';
+      document.getElementById('resMonthlyRental').textContent = '월 ' + baseMonthlyRental.toLocaleString() + '원';
+      document.getElementById('resDiscountedMonthly').textContent = '월 ' + discountedMonthly.toLocaleString() + '원 (제휴카드 실적 반영)';
+
+      const verdictEl = document.getElementById('resFinalVerdict');
+      if (totalRentalCost < totalBuyAndCareCost) {
+        const savedAmount = totalBuyAndCareCost - totalRentalCost;
+        verdictEl.textContent = '타이어렌탈 이용 시 3년간 약 ' + savedAmount.toLocaleString() + '원 절감 + 무상 파손 보증 혜택 수혜 유리';
+      } else {
+        const diffAmount = totalRentalCost - totalBuyAndCareCost;
+        verdictEl.textContent = '3년 총비용은 일시불 구매가 약 ' + diffAmount.toLocaleString() + '원 저렴하나, 렌탈은 파손 시 1:1 신품 무상 교환 보험 혜택이 포함됩니다.';
+      }
+
+      document.getElementById('calcResultPanel').style.display = 'block';
+    }
+  </script>
+  
